@@ -438,7 +438,7 @@ class HRNetV2(nn.Module):
 
 
 def hrnetv2(pretrained=False, **kwargs):
-    model = HRNetV2(n_class=1000, **kwargs)
+    model = HRNetV2(n_class=2, **kwargs)
     if pretrained:
         model.load_state_dict(load_url(model_urls['hrnetv2']), strict=False)
 
